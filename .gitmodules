@@ -1,0 +1,3 @@
+[submodule "Plugins/Procedural Graph Core"]
+	path = Plugins/Procedural Graph Core
+	url = https://github.com/will11600/Procedural-Graph-Core.git
