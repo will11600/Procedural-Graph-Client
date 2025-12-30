@@ -52,6 +52,8 @@ internal sealed class ProceduralGraphClient : EditorPlugin
 
             Node.ParametersChanged += OnParametersChanged;
 
+            Level.SceneSaving += OnSceneSaving;
+
             Level.SceneLoaded += OnSceneLoaded;
             Level.SceneUnloaded += OnSceneUnloaded;
 
@@ -74,6 +76,8 @@ internal sealed class ProceduralGraphClient : EditorPlugin
         finally
         {
             Node.ParametersChanged -= OnParametersChanged;
+
+            Level.SceneSaving -= OnSceneSaving;
 
             Level.SceneLoaded -= OnSceneLoaded;
             Level.SceneUnloaded -= OnSceneUnloaded;
@@ -155,6 +159,14 @@ internal sealed class ProceduralGraphClient : EditorPlugin
         if (asyncInfo.semaphore.Wait(0))
         {
             BeginGenerating(sender, asyncInfo);
+        }
+    }
+
+    private void OnSceneSaving(Scene scene, Guid guid)
+    {
+        if (_scenes.TryGetValue(guid, out SceneInfo? info))
+        {
+            info.Flush();
         }
     }
 
