@@ -87,6 +87,11 @@ internal sealed class ProceduralGraphClient : EditorPlugin
 
             _stoppingCts!.Dispose();
 
+            foreach (NodeGeneratorHandle handle in _handles.Values)
+            {
+                handle.Dispose();
+            }
+
             base.Deinitialize();
         }
     }
