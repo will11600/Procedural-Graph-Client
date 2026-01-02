@@ -32,6 +32,8 @@ internal sealed class NodeLifecycleManager : EditorPlugin, IProceduralGraphLifec
             Author = "William Brocklesby",
             AuthorUrl = "https://william-brocklesby.com",
             Category = "Procedural Graph",
+            Description = "Procedural Graph Client is a Flax Engine Editor Plugin designed to manage and execute procedural graph generation in real-time. It serves as the runtime execution layer for the Procedural Graph system, handling the lifecycle of graph nodes, listening for scene changes, and managing asynchronous generation tasks to ensure editor responsiveness.",
+            RepositoryUrl = "https://github.com/will11600/Procedural-Graph-Client.git",
             Version = new(1, 0, 0)
         };
     }
