@@ -1,3 +1,7 @@
+> [!NOTE]
+> This project is obsolete. You no longer need to install the Procedural Graph Client plugin to use Procedural Graph.
+> [Procedural Graph Core](https://github.com/will11600/Procedural-Graph-Core) now includes all the features of this plugin.
+
 # Procedural Graph Client
 
 **Procedural Graph Client** is a [Flax Engine](https://flaxengine.com/) Editor Plugin designed to manage and execute procedural graph generation in real-time. It serves as the runtime execution layer for the Procedural Graph system, handling the lifecycle of graph nodes, listening for scene changes, and managing asynchronous generation tasks to ensure editor responsiveness.
